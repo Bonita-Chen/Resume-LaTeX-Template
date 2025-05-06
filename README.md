@@ -45,8 +45,8 @@ This project lets you generate a custom PDF résumé by filling out a simple `da
 ## Customize Your Résumé
 
 1. **Edit** `data.yaml`  
-   Fill in your name, contact info, education, experience, activities, skills, etc.  
-   All fields map directly to placeholders in `template.tex`.
+   - Fill in your name, contact info, education, experience, activities, skills, etc.  
+   - All fields map directly to placeholders in `template.tex`.
 
 2. **(Optional) Local Preview**  
    ```bash
