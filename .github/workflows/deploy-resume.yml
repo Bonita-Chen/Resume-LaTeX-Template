@@ -1,0 +1,58 @@
+# .github/workflows/deploy-resume.yml
+name: Build and Deploy Personalized Resume
+
+# Grant Pages permissions
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Check out the repo with full history
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      # 2. Set up Python for template rendering
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Python dependencies
+        run: |
+          pip install pyyaml jinja2
+
+      # 3. Generate main.tex from data.yaml + template.tex
+      - name: Render LaTeX template
+        run: python generate.py
+
+      # 4. Compile the generated main.tex into PDF
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: main.tex
+
+      # 5. Prepare docs folder and move PDF there
+      - name: Prepare docs directory
+        run: |
+          mkdir -p docs
+          cp main.pdf docs/resume.pdf
+
+      # 6. Publish docs/ to GitHub Pages (gh-pages branch)
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: docs
