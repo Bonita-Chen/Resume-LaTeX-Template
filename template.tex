@@ -46,7 +46,7 @@ Awards and Honors: {{ education.honors | join("; ") }}
 \textbf{ {{ act.role }} } \hfill \textbf{ {{ act.location }} } \\
 \textit{ {{ act.project }} } \hfill \textit{ {{ act.start }} -- {{ act.end }} } \\
 {% for bullet in act.bullets %}
-• {{ bullet }}\\
+• {{ bullet | replace('$','\\$') }}\\
 {% endfor %}
 \vspace{5pt}
 {% endfor %}
@@ -57,7 +57,7 @@ Awards and Honors: {{ education.honors | join("; ") }}
 \textbf{ {{ exp.title }} } \hfill \textbf{ {{ exp.location }} } \\
 \textit{ {{ exp.company }} } \hfill \textit{ {{ exp.start }} -- {{ exp.end }} } \\
 {% for bullet in exp.bullets %}
-• {{ bullet }}\\
+• {{ bullet | replace('$','\\$') }}\\
 {% endfor %}
 \vspace{5pt}
 {% endfor %}
