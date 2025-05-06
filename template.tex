@@ -26,8 +26,7 @@
     \faMapMarker\ {{ location }}\quad
     \faEnvelope\ \href{mailto:{{ email }}}{{ email }}\quad
     \faPhone\ {{ phone }}\quad
-- \faLinkedinSquare\ \href{ {{ linkedin }} }{ {{ linkedin }} }
-+ \faLinkedinSquare\ \url{ {{ linkedin }} }
+    \faLinkedinSquare\ \url{ {{ linkedin }} }
 \end{center}
 
 \vspace{-2.5pt}
@@ -69,7 +68,7 @@ Awards and Honors: {{ education.honors | join("; ") }}
 \textbf{ {{ ec.role }} } \hfill \textbf{ {{ ec.location }} } \\
 \textit{ {{ ec.org }} } \hfill \textit{ {{ ec.start }} -- {{ ec.end }} } \\
 {% for bullet in ec.bullets %}
-• {{ bullet }}\\
+• {{ bullet | replace('$','\\$') }}\\
 {% endfor %}
 \vspace{5pt}
 {% endfor %}
