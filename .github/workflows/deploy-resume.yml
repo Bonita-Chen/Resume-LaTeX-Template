@@ -39,6 +39,13 @@ jobs:
         run: |
           mkdir -p docs
           cp main.pdf docs/resume.pdf
+          touch docs/.nojekyll
+          cat << 'EOF' > docs/index.html
+          <!DOCTYPE html>
+          <html>
+            <head><meta http-equiv="refresh" content="0; url=./resume.pdf"></head>
+          </html>
+          EOF
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
