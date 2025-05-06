@@ -2,6 +2,7 @@
 \usepackage{geometry}
 \usepackage{enumitem}
 \usepackage{hyperref}
+\usepackage{url}
 \usepackage{fontawesome}
 \usepackage{setspace}
 \geometry{top=0.5in, bottom=0.5in, left=0.5in, right=0.5in}
@@ -25,7 +26,8 @@
     \faMapMarker\ {{ location }}\quad
     \faEnvelope\ \href{mailto:{{ email }}}{{ email }}\quad
     \faPhone\ {{ phone }}\quad
-    \faLinkedinSquare\ \href{ {{ linkedin }} }{ {{ linkedin }} }
+- \faLinkedinSquare\ \href{ {{ linkedin }} }{ {{ linkedin }} }
++ \faLinkedinSquare\ \url{ {{ linkedin }} }
 \end{center}
 
 \vspace{-2.5pt}
