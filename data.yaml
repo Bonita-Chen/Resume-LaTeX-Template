@@ -1,0 +1,82 @@
+name: Alice Zhang
+location: New York, NY
+email: alice.zhang@nyu.edu
+phone: (212) 998-1234
+linkedin: https://www.linkedin.com/in/alice-zhang/
+
+education:
+  gpa: 3.85/4.00
+  start: 09/2019
+  end: 05/2023
+  coursework:
+    - Intermediate Microeconomics
+    - Econometrics
+    - Monetary Theory
+    - Game Theory
+  honors:
+    - Dean's List (2019–2022)
+    - NYU Economics Undergraduate Research Grant
+
+activities:
+  - role: Research Assistant
+    project: “Urban Transportation and Economic Mobility”
+    location: New York, NY
+    start: 01/2021
+    end: 12/2021
+    bullets:
+      - Collected and cleaned large-scale transit usage data (50k+ records)
+      - Conducted panel regressions in Stata to estimate accessibility effects
+      - Co-authored working paper presented at NYU Econ Research Symposium
+
+experience:
+  - title: Finance Intern
+    company: Morgan Stanley
+    location: New York, NY
+    start: 06/2021
+    end: 08/2021
+    bullets:
+      - Built DCF and comparable company valuation models in Excel
+      - Automated data retrieval with Python scripts using Bloomberg API
+      - Prepared pitch books for client meetings on consumer retail sector
+  - title: Data Analyst Intern
+    company: NYU Stern School of Business
+    location: New York, NY
+    start: 06/2022
+    end: 08/2022
+    bullets:
+      - Designed dashboards in R Shiny to visualize student survey results
+      - Performed hypothesis testing and regression analysis in R
+      - Presented findings to faculty, leading to adoption of new survey modules
+
+extracurricular:
+  - role: Treasurer
+    org: NYU Economics Society
+    location: New York, NY
+    start: 09/2019
+    end: Present
+    bullets:
+      - Managed a $15k annual budget, allocating funds for events and workshops
+      - Organized 6 speaker panels with industry leaders in finance and policy
+  - role: Mentor
+    org: NYU Data Science Club
+    location: New York, NY
+    start: 01/2022
+    end: Present
+    bullets:
+      - Tutored underclassmen in Python, R, and SQL fundamentals
+      - Coordinated biweekly study groups with 30+ participants
+
+skills:
+  languages:
+    - Mandarin Chinese (Native)
+    - English (Fluent)
+  technical:
+    - Python
+    - R
+    - Stata
+    - LaTeX
+    - SQL
+  interests:
+    - Data Visualization
+    - Public Policy
+    - Travel
