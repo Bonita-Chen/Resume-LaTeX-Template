@@ -57,7 +57,7 @@ This project lets you generate a custom PDF résumé by filling out a simple `da
 
 ## Automated Build & Deployment
 
-Once you push to `main`, GitHub Actions will:
+Once you push to `main`, GitHub **Actions** will:
 
 1. **Checkout** your code
 
